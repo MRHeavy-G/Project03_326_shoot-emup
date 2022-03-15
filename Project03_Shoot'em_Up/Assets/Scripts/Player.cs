@@ -16,12 +16,13 @@ public class Player : MonoBehaviour
     public Projectile lPrefab;
 
     public AudioSource soundFired;
+    public AudioSource playerB;
 
 
 
 
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
         {
         // calls the rigibody 
        
@@ -57,6 +58,7 @@ public class Player : MonoBehaviour
         // if we get hit by anything then we end the game
 
         Debug.Log("Game Over");
+        playerB.Play();
         Destroy(gameObject);
         SceneManager.LoadScene("Credit Scene");
         //Debug.Log("Game Over");

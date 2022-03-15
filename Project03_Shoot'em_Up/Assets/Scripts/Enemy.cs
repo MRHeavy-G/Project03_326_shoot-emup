@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     public int score = 10;
 
+    public AudioSource enemyB;
+
 
     public void Awake()
     {
@@ -77,6 +79,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
             //Debug.Log(gameObject.name);
+            enemyB.Play();
             killed?.Invoke(this);
         }
     }

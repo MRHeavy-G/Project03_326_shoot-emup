@@ -76,6 +76,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 010208cbd183c7442a51c19b0f8b3f8a, type: 3}
   animationTime: 1
   score: 10
+  enemyB: {fileID: 4432701350627003661, guid: 48607c285e347224baa2f4d8d72dc89e, type: 3}
 --- !u!212 &5585560251030350600
 SpriteRenderer:
   m_ObjectHideFlags: 0

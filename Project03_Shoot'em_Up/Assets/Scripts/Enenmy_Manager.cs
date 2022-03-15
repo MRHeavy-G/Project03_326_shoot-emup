@@ -31,6 +31,11 @@ public class Enenmy_Manager : MonoBehaviour
 
     public Vector3 initialPosition { get; private set; }
 
+    public AudioSource soundFired;
+    
+
+
+
 
     /**
      * This method will create the needed enemies in the rows and colmuns with distinct enemies added in before the game runs.
@@ -105,6 +110,7 @@ public class Enenmy_Manager : MonoBehaviour
             if (Random.value < (1.0f / (float) amountAlive))
             {
                 Instantiate(missilePrefab, enemy.position, Quaternion.identity);
+                soundFired.Play();
                 break;
             }
         }
